@@ -24,7 +24,8 @@ services:
     tty: true             # <-- Allocate a TTY
     volumes:
       #- "./user_data:/freqtrade/user_data" #old 
-      - "/var/lib/docker/volumes/freqtradestack/_data:/user_data"
+      - "/var/lib/docker/volumes/freqtradestack/_data:/freqtrade/user_data" #gives /var/lib/docker/volumes/freqtradestack/_data	/user_data
+      #need this/var/lib/docker/volumes/freqtradestack/_data	freqtrade/user_data
     # Expose api on port 8080 (localhost only)
     # Please read the https://www.freqtrade.io/en/stable/rest-api/ documentation
     # for more information.
