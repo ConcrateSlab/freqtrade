@@ -20,6 +20,8 @@ services:
     #   dockerfile: "./docker/Dockerfile.custom"
     restart: unless-stopped
     container_name: freqtrade
+    stdin_open: true      # <-- Enable interactive mode
+    tty: true             # <-- Allocate a TTY
     volumes:
       - "./user_data:/freqtrade/user_data"
     # Expose api on port 8080 (localhost only)
